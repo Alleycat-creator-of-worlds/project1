@@ -47,7 +47,7 @@
   <h1>Albums by Jelly Roll</h1>
   <section class="album">
     <h2>Ballads of the Broken</h2>
-    <img src="https://genius.com/album_cover_arts/703548" alt="Ballads of the Broken Album Cover" width="300" height="400">
+    <img src="https://th.bing.com/th/id/R.49aa9b702f8076a51052a4f3f27e1c1e?rik=FEc%2fq%2bT22%2fJZNQ&riu=http%3a%2f%2frhinebeckvinylvault.com%2fcdn%2fshop%2ffiles%2fimage_7421e02c-6c1f-4199-b8c9-e601fd4793cb.jpg%3fv%3d1688835796&ehk=CyzrDBp9hIhxfWbh5LL%2fMGTCjQZmmCP2Kk0I1d9dHpQ%3d&risl=&pid=ImgRaw&r=0" alt="Ballads of the Broken Album Cover" width="300" height="400">
     <p><strong>Release Date:</strong> September 17, 2021</p>
     <ul>
       <li>Dead Man Walking</li>
@@ -131,44 +131,3 @@
   </article>
 </body>
 </html>
-''',
-
-    "style.css": '''body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-nav {
-  background-color: purple;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-h1, h2 {
-  color: purple;
-}
-
-.album {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-# Create the ZIP file
-with ZipFile("jelly_roll_website.zip", "w") as zipf:
-    for filename, content in files.items():
-        zipf.writestr(filename, content)
