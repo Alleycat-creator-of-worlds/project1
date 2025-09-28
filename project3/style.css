@@ -1,0 +1,174 @@
+"index.html": '''<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelly Roll - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Jelly Roll</h1>
+    <img src="https://i8.amplience.net/i/naras/Jelly-Roll-Live-Photo-2023-Andy-Pollitt.jpg" alt="Jelly Roll" width="500" height="600">
+  </header>
+  <section>
+    <h2>About the Artist</h2>
+    <p>
+      Jelly Roll was born in Nashville, Tennessee. His music is a versatile combination of country, hip hop, and rock.
+      He had a tough life growing up but turned his life around through music.
+    </p>
+  </section>
+</body>
+</html>
+''',
+
+    "music.html": '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelly Roll - Music</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </nav>
+  <h1>Albums by Jelly Roll</h1>
+  <section class="album">
+    <h2>Ballads of the Broken</h2>
+    <img src="https://genius.com/album_cover_arts/703548" alt="Ballads of the Broken Album Cover" width="300" height="400">
+    <p><strong>Release Date:</strong> September 17, 2021</p>
+    <ul>
+      <li>Dead Man Walking</li>
+      <li>Backslide</li>
+      <li>Son Of A Sinner</li>
+      <li>Over You</li>
+      <li>Hollow</li>
+      <li>Even Angels Cry</li>
+      <li>Sober</li>
+      <li>Empty House</li>
+      <li>Mobile Home (demo)</li>
+      <li>Son of A Sinner (demo)</li>
+    </ul>
+  </section>
+  <section class="album">
+    <h2>Beautifully Broken</h2>
+    <p><strong>Release Date:</strong> October 11, 2024</p>
+    <ul>
+      <li>Winning Streak</li>
+      <li>Burning</li>
+      <li>Heart of Stone</li>
+      <li>I Am Not Okay</li>
+      <li>When the Drugs Don't Work</li>
+      <li>Higher Than Heaven</li>
+      <li>Liar</li>
+      <li>Everyone Bleeds</li>
+      <li>Get By</li>
+      <li>Unpretty</li>
+      <li>Grace</li>
+      <li>What it Takes</li>
+      <li>Hey Mama</li>
+      <li>Time of Day</li>
+      <li>Born Again</li>
+      <li>Guilty</li>
+      <li>Little Light</li>
+      <li>Hear Me Out</li>
+      <li>Woman</li>
+      <li>Smile So Much</li>
+      <li>My Cross</li>
+      <li>What's Wrong With Me</li>
+    </ul>
+  </section>
+  <section class=album>
+    <h2>Crosses and Crossroads</h2>
+    <p><strong>Release Date:</strong> April 15, 2019</p>
+    <ul>
+      <li>I Call Everyone Bubba</li>
+      <li>Love The Heartless</li>
+      <li>No Worries</li>
+      <li>Double Crown</li>
+      <li>Same Asshole</li>
+      <li>Sunshine After The Rain</li>
+      <li>Girls Just Wanna Have Fun</li>
+    </ul>
+  </section>
+</body>
+</html>
+''',
+
+    "news.html": '''<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelly Roll - News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </nav>
+  <h1>Recent News</h1>
+  <article>
+    <h2>Jelly Roll Talks About Losing 200 Pounds</h2>
+    <p><strong>Date:</strong> September 2025</p>
+    <p>Singer-songwriter Jelly Roll has stunned fans with his recent transformation, having lost nearly 200 pounds. He shared the news in a recent interview, emphasizing how it's changed his life physically and mentally.</p>
+  </article>
+</body>
+</html>
+''',
+
+    "style.css": '''body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+nav {
+  background-color: purple;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: purple;
+}
+
+.album {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+# Create the ZIP file
+with ZipFile("jelly_roll_website.zip", "w") as zipf:
+    for filename, content in files.items():
+        zipf.writestr(filename, content)
